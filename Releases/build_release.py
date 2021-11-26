@@ -30,6 +30,10 @@ def copy_and_check_plugins(src: os.PathLike, dst: os.PathLike, version: str):
         src_path = os.path.join(src, plugin)
         dst_path = os.path.join(dst, plugin)
         shutil.copy2(src_path, dst_path)
+        modgroups = "{}.modgroups".format(os.path.splitext(plugin)[0])
+        src_path = os.path.join(src, modgroups)
+        dst_path = os.path.join(dst, modgroups)
+        shutil.copy2(src_path, dst_path)
 
 
 def build_oldrim_1k(release_name: str, version: str):
