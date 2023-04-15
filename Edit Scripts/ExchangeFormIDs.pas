@@ -373,7 +373,7 @@ end;
 
 function Process(e: IInterface): Integer;
 var
-  i, oldFormID, newFormID: Integer;
+  i, oldFormID, newFormID: Cardinal;
   sOldFormID, sNewFormID: String;
 begin
   if Equals(GetFile(e), cca) then begin
